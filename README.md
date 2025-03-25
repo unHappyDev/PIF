@@ -3,6 +3,8 @@
 
 Gestão do projeto: [Notion](https://wistful-drain-59a.notion.site/1a3d7748e6688042b2a4d3b4f09a6da0?v=1a3d7748e668818da693000c09a8f029)
 
+Protótipo do projeto: [Figma](htttps://google.com)
+
 ## **Integrantes:**
 - Giuseppe Ferri
 - Guilherme Danezi Cardoso
