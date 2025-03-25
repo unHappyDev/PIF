@@ -28,7 +28,7 @@
 2. 
 3. 
 
-### 2. **Back-End**
+### **Back-End**
 1. 
 2. 
 3. 
@@ -37,7 +37,7 @@
 - **Criar a tabela:** .
 - **Adicinar as colunas:** .
 
-### 4. **Casos de Teste**
+### **Casos de Teste**
 - Devem ser desenvolvidos testes automatizados conforme necessário, nos quais serão criados cenários com base nos ***Critérios de Aceitação*** que deverão representar condições a serem validadas, sejam de sucesso (quando o comportamento está de acordo com o esperado) ou de falha (quando ocorre um erro ou exceção esperada).
 
 ## **Referências e Anexos**:
