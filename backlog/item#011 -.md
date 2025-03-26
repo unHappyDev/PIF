@@ -4,8 +4,8 @@
 *...*
 
 ## **Prazos**:
-- Protótipo Figma: **dd/mm/yyyy**
-- Finalização do Item: **dd/mm/yy**
+- **Protótipo Figma:** dd/mm/yyyy
+- **Finalização do Item:** dd/mm/yy
 
 ## **Prioridade**:
 - Muito Baixa / Baixa / Normal / Alta / Muito Alta
@@ -28,16 +28,16 @@
 2. 
 3. 
 
-### 2. **Back-End**
+### **Back-End**
 1. 
 2. 
 3. 
 
-### **Integração com SQL Server**  
+### **Database**  
 - **Criar a tabela:** .
 - **Adicinar as colunas:** .
 
-### 4. **Casos de Teste**
+### **Casos de Teste**
 - Devem ser desenvolvidos testes automatizados conforme necessário, nos quais serão criados cenários com base nos ***Critérios de Aceitação*** que deverão representar condições a serem validadas, sejam de sucesso (quando o comportamento está de acordo com o esperado) ou de falha (quando ocorre um erro ou exceção esperada).
 
 ## **Referências e Anexos**:

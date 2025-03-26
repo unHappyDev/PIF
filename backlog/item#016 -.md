@@ -4,8 +4,8 @@
 *...*
 
 ## **Prazos**:
-- Protótipo Figma: **dd/mm/yyyy**
-- Finalização do Item: **dd/mm/yy**
+- **Protótipo Figma:** dd/mm/yyyy
+- **Finalização do Item:** dd/mm/yy
 
 ## **Prioridade**:
 - Muito Baixa / Baixa / Normal / Alta / Muito Alta
@@ -33,7 +33,7 @@
 2. 
 3. 
 
-### **Integração com SQL Server**  
+### **Database**  
 - **Criar a tabela:** .
 - **Adicinar as colunas:** .
 
