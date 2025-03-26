@@ -1,334 +1,277 @@
-<mxfile host="app.diagrams.net">
-  <diagram id="umlClassDiagramExample" name="UML_Classes">
-    <mxGraphModel>
-      <root>
-        <!-- Camada raiz -->
-        <mxCell id="0"/>
-        <mxCell id="1" parent="0"/>
-
-        <!-- ======================================= -->
-        <!-- ============== CLASSE USER ============ -->
-        <!-- ======================================= -->
-        <mxCell id="classUser" value="User" style="swimlane;fontStyle=1;childLayout=stackLayout;horizontal=1;startSize=30;horizontalStack=0;resizeParent=1;resizeLast=0;collapsible=1;marginBottom=0;whiteSpace=wrap;html=1;" parent="1" vertex="1">
-          <mxGeometry x="100" y="80" width="160" height="220" as="geometry"/>
-        </mxCell>
-
-        <!-- Atributos de User -->
-        <mxCell id="userAttr1" value="+ user_id : int (PK)" style="text;strokeColor=none;fillColor=none;align=left;verticalAlign=middle;spacingLeft=4;whiteSpace=wrap;html=1;" parent="classUser" vertex="1">
-          <mxGeometry y="30" width="160" height="26" as="geometry"/>
-        </mxCell>
-        <mxCell id="userAttr2" value="- full_name : string" style="text;strokeColor=none;fillColor=none;align=left;verticalAlign=top;spacingLeft=4;whiteSpace=wrap;html=1;" parent="classUser" vertex="1">
-          <mxGeometry y="56" width="160" height="26" as="geometry"/>
-        </mxCell>
-        <mxCell id="userAttr3" value="- birth_date : date" style="text;strokeColor=none;fillColor=none;align=left;verticalAlign=top;spacingLeft=4;whiteSpace=wrap;html=1;" parent="classUser" vertex="1">
-          <mxGeometry y="82" width="160" height="26" as="geometry"/>
-        </mxCell>
-        <mxCell id="userAttr4" value="- phone : string" style="text;strokeColor=none;fillColor=none;align=left;verticalAlign=top;spacingLeft=4;whiteSpace=wrap;html=1;" parent="classUser" vertex="1">
-          <mxGeometry y="108" width="160" height="26" as="geometry"/>
-        </mxCell>
-        <mxCell id="userAttr5" value="- email : string" style="text;strokeColor=none;fillColor=none;align=left;verticalAlign=top;spacingLeft=4;whiteSpace=wrap;html=1;" parent="classUser" vertex="1">
-          <mxGeometry y="134" width="160" height="26" as="geometry"/>
-        </mxCell>
-        <mxCell id="userAttr6" value="- rg : string" style="text;strokeColor=none;fillColor=none;align=left;verticalAlign=top;spacingLeft=4;whiteSpace=wrap;html=1;" parent="classUser" vertex="1">
-          <mxGeometry y="160" width="160" height="26" as="geometry"/>
-        </mxCell>
-        <mxCell id="userAttr7" value="- cpf : string" style="text;strokeColor=none;fillColor=none;align=left;verticalAlign=top;spacingLeft=4;whiteSpace=wrap;html=1;" parent="classUser" vertex="1">
-          <mxGeometry y="186" width="160" height="26" as="geometry"/>
-        </mxCell>
-        <mxCell id="userAttr8" value="- role_id : int (FK)" style="text;strokeColor=none;fillColor=none;align=left;verticalAlign=top;spacingLeft=4;whiteSpace=wrap;html=1;" parent="classUser" vertex="1">
-          <mxGeometry y="212" width="160" height="26" as="geometry"/>
-        </mxCell>
-
-        <!-- ======================================= -->
-        <!-- ============= CLASSE ROLES ============ -->
-        <!-- ======================================= -->
-        <mxCell id="classRoles" value="Roles" style="swimlane;fontStyle=1;childLayout=stackLayout;horizontal=1;startSize=30;resizeParent=1;resizeLast=0;collapsible=1;whiteSpace=wrap;html=1;" parent="1" vertex="1">
-          <mxGeometry x="320" y="80" width="160" height="80" as="geometry"/>
-        </mxCell>
-
-        <!-- Atributos de Roles -->
-        <mxCell id="rolesAttr1" value="+ role_id : int (PK)" style="text;strokeColor=none;fillColor=none;align=left;verticalAlign=middle;spacingLeft=4;whiteSpace=wrap;html=1;" parent="classRoles" vertex="1">
-          <mxGeometry y="30" width="160" height="26" as="geometry"/>
-        </mxCell>
-        <mxCell id="rolesAttr2" value="- role_name : string" style="text;strokeColor=none;fillColor=none;align=left;verticalAlign=middle;spacingLeft=4;whiteSpace=wrap;html=1;" parent="classRoles" vertex="1">
-          <mxGeometry y="56" width="160" height="26" as="geometry"/>
-        </mxCell>
-
-        <!-- Relacionamento User - Roles (FK role_id) -->
-        <mxCell id="edgeUserRoles" value="" style="edgeStyle=entityRelationEdgeStyle;endArrow=none;html=1;" parent="1" edge="1" source="classUser" target="classRoles">
-          <mxGeometry relative="1" as="geometry"/>
-        </mxCell>
-
-        <!-- ======================================= -->
-        <!-- ============ CLASSE STUDENT =========== -->
-        <!-- ======================================= -->
-        <mxCell id="classStudent" value="Student" style="swimlane;fontStyle=1;childLayout=stackLayout;horizontal=1;startSize=30;resizeParent=1;whiteSpace=wrap;html=1;" parent="1" vertex="1">
-          <mxGeometry x="100" y="340" width="160" height="150" as="geometry"/>
-        </mxCell>
-
-        <!-- Atributos de Student -->
-        <mxCell id="studentAttr1" value="+ student_id : int (PK)" style="text;strokeColor=none;fillColor=none;align=left;verticalAlign=middle;spacingLeft=4;whiteSpace=wrap;html=1;" parent="classStudent" vertex="1">
-          <mxGeometry y="30" width="160" height="26" as="geometry"/>
-        </mxCell>
-        <mxCell id="studentAttr2" value="- user_id : int (FK)" style="text;strokeColor=none;fillColor=none;align=left;verticalAlign=middle;spacingLeft=4;whiteSpace=wrap;html=1;" parent="classStudent" vertex="1">
-          <mxGeometry y="56" width="160" height="26" as="geometry"/>
-        </mxCell>
-        <mxCell id="studentAttr3" value="- enrollment_date : date" style="text;strokeColor=none;fillColor=none;align=left;verticalAlign=middle;spacingLeft=4;whiteSpace=wrap;html=1;" parent="classStudent" vertex="1">
-          <mxGeometry y="82" width="160" height="26" as="geometry"/>
-        </mxCell>
-        <mxCell id="studentAttr4" value="- class_id : int (FK)" style="text;strokeColor=none;fillColor=none;align=left;verticalAlign=middle;spacingLeft=4;whiteSpace=wrap;html=1;" parent="classStudent" vertex="1">
-          <mxGeometry y="108" width="160" height="26" as="geometry"/>
-        </mxCell>
-        <mxCell id="studentAttr5" value="- degreeprogram_id : int (FK)" style="text;strokeColor=none;fillColor=none;align=left;verticalAlign=middle;spacingLeft=4;whiteSpace=wrap;html=1;" parent="classStudent" vertex="1">
-          <mxGeometry y="134" width="160" height="26" as="geometry"/>
-        </mxCell>
-
-        <!-- Relacionamento Student - User (FK user_id) -->
-        <mxCell id="edgeStudentUser" value="" style="edgeStyle=entityRelationEdgeStyle;endArrow=none;html=1;" parent="1" edge="1" source="classStudent" target="classUser">
-          <mxGeometry relative="1" as="geometry"/>
-        </mxCell>
-
-        <!-- ======================================= -->
-        <!-- =========== CLASSE PROFESSOR =========== -->
-        <!-- ======================================= -->
-        <mxCell id="classProfessor" value="Professor" style="swimlane;fontStyle=1;childLayout=stackLayout;horizontal=1;startSize=30;resizeParent=1;whiteSpace=wrap;html=1;" parent="1" vertex="1">
-          <mxGeometry x="320" y="340" width="160" height="160" as="geometry"/>
-        </mxCell>
-
-        <!-- Atributos de Professor -->
-        <mxCell id="profAttr1" value="+ professor_id : int (PK)" style="text;strokeColor=none;fillColor=none;align=left;verticalAlign=middle;spacingLeft=4;whiteSpace=wrap;html=1;" parent="classProfessor" vertex="1">
-          <mxGeometry y="30" width="160" height="26" as="geometry"/>
-        </mxCell>
-        <mxCell id="profAttr2" value="- user_id : int (FK)" style="text;strokeColor=none;fillColor=none;align=left;verticalAlign=middle;spacingLeft=4;whiteSpace=wrap;html=1;" parent="classProfessor" vertex="1">
-          <mxGeometry y="56" width="160" height="26" as="geometry"/>
-        </mxCell>
-        <mxCell id="profAttr3" value="- hire_date : date" style="text;strokeColor=none;fillColor=none;align=left;verticalAlign=middle;spacingLeft=4;whiteSpace=wrap;html=1;" parent="classProfessor" vertex="1">
-          <mxGeometry y="82" width="160" height="26" as="geometry"/>
-        </mxCell>
-        <mxCell id="profAttr4" value="- subject_1 : int (FK)" style="text;strokeColor=none;fillColor=none;align=left;verticalAlign=middle;spacingLeft=4;whiteSpace=wrap;html=1;" parent="classProfessor" vertex="1">
-          <mxGeometry y="108" width="160" height="26" as="geometry"/>
-        </mxCell>
-        <mxCell id="profAttr5" value="- subject_2 : int (FK)" style="text;strokeColor=none;fillColor=none;align=left;verticalAlign=middle;spacingLeft=4;whiteSpace=wrap;html=1;" parent="classProfessor" vertex="1">
-          <mxGeometry y="134" width="160" height="26" as="geometry"/>
-        </mxCell>
-
-        <!-- Relacionamento Professor - User (FK user_id) -->
-        <mxCell id="edgeProfessorUser" value="" style="edgeStyle=entityRelationEdgeStyle;endArrow=none;html=1;" parent="1" edge="1" source="classProfessor" target="classUser">
-          <mxGeometry relative="1" as="geometry"/>
-        </mxCell>
-
-        <!-- ======================================= -->
-        <!-- ========== CLASSE ADMINISTRATION ======= -->
-        <!-- ======================================= -->
-        <mxCell id="classAdmin" value="Administration" style="swimlane;fontStyle=1;childLayout=stackLayout;horizontal=1;startSize=30;resizeParent=1;whiteSpace=wrap;html=1;" parent="1" vertex="1">
-          <mxGeometry x="540" y="80" width="160" height="120" as="geometry"/>
-        </mxCell>
-
-        <!-- Atributos de Administration -->
-        <mxCell id="adminAttr1" value="+ admin_id : int (PK)" style="text;strokeColor=none;fillColor=none;align=left;verticalAlign=middle;spacingLeft=4;whiteSpace=wrap;html=1;" parent="classAdmin" vertex="1">
-          <mxGeometry y="30" width="160" height="26" as="geometry"/>
-        </mxCell>
-        <mxCell id="adminAttr2" value="- user_id : int (FK)" style="text;strokeColor=none;fillColor=none;align=left;verticalAlign=middle;spacingLeft=4;whiteSpace=wrap;html=1;" parent="classAdmin" vertex="1">
-          <mxGeometry y="56" width="160" height="26" as="geometry"/>
-        </mxCell>
-        <mxCell id="adminAttr3" value="- hire_date : date" style="text;strokeColor=none;fillColor=none;align=left;verticalAlign=middle;spacingLeft=4;whiteSpace=wrap;html=1;" parent="classAdmin" vertex="1">
-          <mxGeometry y="82" width="160" height="26" as="geometry"/>
-        </mxCell>
-
-        <!-- Relacionamento Administration - User (FK user_id) -->
-        <mxCell id="edgeAdminUser" value="" style="edgeStyle=entityRelationEdgeStyle;endArrow=none;html=1;" parent="1" edge="1" source="classAdmin" target="classUser">
-          <mxGeometry relative="1" as="geometry"/>
-        </mxCell>
-
-        <!-- ======================================= -->
-        <!-- ============ CLASSE CLASSES =========== -->
-        <!-- ======================================= -->
-        <mxCell id="classClasses" value="Classes" style="swimlane;fontStyle=1;childLayout=stackLayout;horizontal=1;startSize=30;resizeParent=1;whiteSpace=wrap;html=1;" parent="1" vertex="1">
-          <mxGeometry x="100" y="520" width="160" height="180" as="geometry"/>
-        </mxCell>
-
-        <!-- Atributos de Classes -->
-        <mxCell id="classesAttr1" value="+ class_id : int (PK)" style="text;strokeColor=none;fillColor=none;align=left;verticalAlign=middle;spacingLeft=4;whiteSpace=wrap;html=1;" parent="classClasses" vertex="1">
-          <mxGeometry y="30" width="160" height="26" as="geometry"/>
-        </mxCell>
-        <mxCell id="classesAttr2" value="- subject_id : int (FK)" style="text;strokeColor=none;fillColor=none;align=left;verticalAlign=middle;spacingLeft=4;whiteSpace=wrap;html=1;" parent="classClasses" vertex="1">
-          <mxGeometry y="56" width="160" height="26" as="geometry"/>
-        </mxCell>
-        <mxCell id="classesAttr3" value="- professor_id : int (FK)" style="text;strokeColor=none;fillColor=none;align=left;verticalAlign=middle;spacingLeft=4;whiteSpace=wrap;html=1;" parent="classClasses" vertex="1">
-          <mxGeometry y="82" width="160" height="26" as="geometry"/>
-        </mxCell>
-        <mxCell id="classesAttr4" value="- turn : string" style="text;strokeColor=none;fillColor=none;align=left;verticalAlign=middle;spacingLeft=4;whiteSpace=wrap;html=1;" parent="classClasses" vertex="1">
-          <mxGeometry y="108" width="160" height="26" as="geometry"/>
-        </mxCell>
-        <mxCell id="classesAttr5" value="- year : int" style="text;strokeColor=none;fillColor=none;align=left;verticalAlign=middle;spacingLeft=4;whiteSpace=wrap;html=1;" parent="classClasses" vertex="1">
-          <mxGeometry y="134" width="160" height="26" as="geometry"/>
-        </mxCell>
-        <mxCell id="classesAttr6" value="- semester : int" style="text;strokeColor=none;fillColor=none;align=left;verticalAlign=middle;spacingLeft=4;whiteSpace=wrap;html=1;" parent="classClasses" vertex="1">
-          <mxGeometry y="160" width="160" height="26" as="geometry"/>
-        </mxCell>
-
-        <!-- Relacionamento Classes - Student (FK class_id em Student) -->
-        <mxCell id="edgeStudentClasses" value="" style="edgeStyle=entityRelationEdgeStyle;endArrow=none;html=1;" parent="1" edge="1" source="classStudent" target="classClasses">
-          <mxGeometry relative="1" as="geometry"/>
-        </mxCell>
-
-        <!-- Relacionamento Classes - Professor (FK professor_id) -->
-        <mxCell id="edgeClassesProfessor" value="" style="edgeStyle=entityRelationEdgeStyle;endArrow=none;html=1;" parent="1" edge="1" source="classClasses" target="classProfessor">
-          <mxGeometry relative="1" as="geometry"/>
-        </mxCell>
-
-        <!-- ======================================= -->
-        <!-- ============ CLASSE SUBJECTS =========== -->
-        <!-- ======================================= -->
-        <mxCell id="classSubjects" value="Subjects" style="swimlane;fontStyle=1;childLayout=stackLayout;horizontal=1;startSize=30;resizeParent=1;whiteSpace=wrap;html=1;" parent="1" vertex="1">
-          <mxGeometry x="320" y="520" width="160" height="90" as="geometry"/>
-        </mxCell>
-
-        <!-- Atributos de Subjects -->
-        <mxCell id="subjectsAttr1" value="+ subject_id : int (PK)" style="text;strokeColor=none;fillColor=none;align=left;verticalAlign=middle;spacingLeft=4;whiteSpace=wrap;html=1;" parent="classSubjects" vertex="1">
-          <mxGeometry y="30" width="160" height="26" as="geometry"/>
-        </mxCell>
-        <mxCell id="subjectsAttr2" value="- subject_name : string" style="text;strokeColor=none;fillColor=none;align=left;verticalAlign=middle;spacingLeft=4;whiteSpace=wrap;html=1;" parent="classSubjects" vertex="1">
-          <mxGeometry y="56" width="160" height="26" as="geometry"/>
-        </mxCell>
-
-        <!-- Relacionamento Classes - Subjects (FK subject_id) -->
-        <mxCell id="edgeClassesSubjects" value="" style="edgeStyle=entityRelationEdgeStyle;endArrow=none;html=1;" parent="1" edge="1" source="classClasses" target="classSubjects">
-          <mxGeometry relative="1" as="geometry"/>
-        </mxCell>
-
-        <!-- Relacionamento Professor - Subjects (subject_1, subject_2) simplificado -->
-        <mxCell id="edgeProfessorSubjects" value="" style="edgeStyle=entityRelationEdgeStyle;endArrow=none;html=1;" parent="1" edge="1" source="classProfessor" target="classSubjects">
-          <mxGeometry relative="1" as="geometry"/>
-        </mxCell>
-
-        <!-- ======================================= -->
-        <!-- ======= CLASSE ACADEMIC CURRICULUM ===== -->
-        <!-- ======================================= -->
-        <mxCell id="classCurriculum" value="AcademicCurriculum" style="swimlane;fontStyle=1;childLayout=stackLayout;horizontal=1;startSize=30;resizeParent=1;whiteSpace=wrap;html=1;" parent="1" vertex="1">
-          <mxGeometry x="540" y="340" width="160" height="120" as="geometry"/>
-        </mxCell>
-
-        <!-- Atributos de AcademicCurriculum -->
-        <mxCell id="curriculumAttr1" value="+ curriculum_id : int (PK)" style="text;strokeColor=none;fillColor=none;align=left;verticalAlign=middle;whiteSpace=wrap;html=1;" parent="classCurriculum" vertex="1">
-          <mxGeometry y="30" width="160" height="26" as="geometry"/>
-        </mxCell>
-        <mxCell id="curriculumAttr2" value="- degreeprogram_id : int (FK)" style="text;strokeColor=none;fillColor=none;align=left;verticalAlign=middle;whiteSpace=wrap;html=1;" parent="classCurriculum" vertex="1">
-          <mxGeometry y="56" width="160" height="26" as="geometry"/>
-        </mxCell>
-        <mxCell id="curriculumAttr3" value="- subject_id : int (FK)" style="text;strokeColor=none;fillColor=none;align=left;verticalAlign=middle;whiteSpace=wrap;html=1;" parent="classCurriculum" vertex="1">
-          <mxGeometry y="82" width="160" height="26" as="geometry"/>
-        </mxCell>
-
-        <!-- ======================================= -->
-        <!-- =========== CLASSE DEGREEPROGRAM ======= -->
-        <!-- ======================================= -->
-        <mxCell id="classDegreeProg" value="DegreeProgram" style="swimlane;fontStyle=1;childLayout=stackLayout;horizontal=1;startSize=30;resizeParent=1;whiteSpace=wrap;html=1;" parent="1" vertex="1">
-          <mxGeometry x="760" y="80" width="170" height="90" as="geometry"/>
-        </mxCell>
-
-        <!-- Atributos de DegreeProgram -->
-        <mxCell id="degAttr1" value="+ degreeprogram_id : int (PK)" style="text;strokeColor=none;fillColor=none;align=left;verticalAlign=middle;whiteSpace=wrap;html=1;" parent="classDegreeProg" vertex="1">
-          <mxGeometry y="30" width="170" height="26" as="geometry"/>
-        </mxCell>
-        <mxCell id="degAttr2" value="- degreeprogram_name : string" style="text;strokeColor=none;fillColor=none;align=left;verticalAlign=middle;whiteSpace=wrap;html=1;" parent="classDegreeProg" vertex="1">
-          <mxGeometry y="56" width="170" height="26" as="geometry"/>
-        </mxCell>
-
-        <!-- Relacionamento Student - DegreeProgram (FK degreeprogram_id) -->
-        <mxCell id="edgeStudentDegree" value="" style="edgeStyle=entityRelationEdgeStyle;endArrow=none;html=1;" parent="1" edge="1" source="classStudent" target="classDegreeProg">
-          <mxGeometry relative="1" as="geometry"/>
-        </mxCell>
-
-        <!-- Relacionamento AcademicCurriculum - DegreeProgram -->
-        <mxCell id="edgeCurricDegree" value="" style="edgeStyle=entityRelationEdgeStyle;endArrow=none;html=1;" parent="1" edge="1" source="classCurriculum" target="classDegreeProg">
-          <mxGeometry relative="1" as="geometry"/>
-        </mxCell>
-
-        <!-- Relacionamento AcademicCurriculum - Subjects -->
-        <mxCell id="edgeCurricSubject" value="" style="edgeStyle=entityRelationEdgeStyle;endArrow=none;html=1;" parent="1" edge="1" source="classCurriculum" target="classSubjects">
-          <mxGeometry relative="1" as="geometry"/>
-        </mxCell>
-
-        <!-- ======================================= -->
-        <!-- =========== CLASSE ATTENDANCE ========= -->
-        <!-- ======================================= -->
-        <mxCell id="classAttendance" value="Attendance" style="swimlane;fontStyle=1;childLayout=stackLayout;horizontal=1;startSize=30;resizeParent=1;whiteSpace=wrap;html=1;" parent="1" vertex="1">
-          <mxGeometry x="540" y="520" width="170" height="180" as="geometry"/>
-        </mxCell>
-
-        <!-- Atributos de Attendance -->
-        <mxCell id="attAttr1" value="+ attendance_id : int (PK)" style="text;strokeColor=none;fillColor=none;align=left;verticalAlign=middle;whiteSpace=wrap;html=1;" parent="classAttendance" vertex="1">
-          <mxGeometry y="30" width="170" height="26" as="geometry"/>
-        </mxCell>
-        <mxCell id="attAttr2" value="- student_id : int (FK)" style="text;strokeColor=none;fillColor=none;align=left;verticalAlign=middle;whiteSpace=wrap;html=1;" parent="classAttendance" vertex="1">
-          <mxGeometry y="56" width="170" height="26" as="geometry"/>
-        </mxCell>
-        <mxCell id="attAttr3" value="- attendance_date : date" style="text;strokeColor=none;fillColor=none;align=left;verticalAlign=middle;whiteSpace=wrap;html=1;" parent="classAttendance" vertex="1">
-          <mxGeometry y="82" width="170" height="26" as="geometry"/>
-        </mxCell>
-        <mxCell id="attAttr4" value="- daily_presence : boolean" style="text;strokeColor=none;fillColor=none;align=left;verticalAlign=middle;whiteSpace=wrap;html=1;" parent="classAttendance" vertex="1">
-          <mxGeometry y="108" width="170" height="26" as="geometry"/>
-        </mxCell>
-        <mxCell id="attAttr5" value="- class_count : int" style="text;strokeColor=none;fillColor=none;align=left;verticalAlign=middle;whiteSpace=wrap;html=1;" parent="classAttendance" vertex="1">
-          <mxGeometry y="134" width="170" height="26" as="geometry"/>
-        </mxCell>
-        <mxCell id="attAttr6" value="- total_presences : int" style="text;strokeColor=none;fillColor=none;align=left;verticalAlign=middle;whiteSpace=wrap;html=1;" parent="classAttendance" vertex="1">
-          <mxGeometry y="160" width="170" height="26" as="geometry"/>
-        </mxCell>
-
-        <!-- Relacionamento Attendance - Student (FK student_id) -->
-        <mxCell id="edgeAttendanceStudent" value="" style="edgeStyle=entityRelationEdgeStyle;endArrow=none;html=1;" parent="1" edge="1" source="classAttendance" target="classStudent">
-          <mxGeometry relative="1" as="geometry"/>
-        </mxCell>
-
-        <!-- ======================================= -->
-        <!-- ============ CLASSE GRADES ============ -->
-        <!-- ======================================= -->
-        <mxCell id="classGrades" value="Grades" style="swimlane;fontStyle=1;childLayout=stackLayout;horizontal=1;startSize=30;resizeParent=1;whiteSpace=wrap;html=1;" parent="1" vertex="1">
-          <mxGeometry x="760" y="340" width="170" height="210" as="geometry"/>
-        </mxCell>
-
-        <!-- Atributos de Grades -->
-        <mxCell id="gradeAttr1" value="+ grade_id : int (PK)" style="text;strokeColor=none;fillColor=none;align=left;verticalAlign=middle;whiteSpace=wrap;html=1;" parent="classGrades" vertex="1">
-          <mxGeometry y="30" width="170" height="26" as="geometry"/>
-        </mxCell>
-        <mxCell id="gradeAttr2" value="- subject_id : int (FK)" style="text;strokeColor=none;fillColor=none;align=left;verticalAlign=middle;whiteSpace=wrap;html=1;" parent="classGrades" vertex="1">
-          <mxGeometry y="56" width="170" height="26" as="geometry"/>
-        </mxCell>
-        <mxCell id="gradeAttr3" value="- student_id : int (FK)" style="text;strokeColor=none;fillColor=none;align=left;verticalAlign=middle;whiteSpace=wrap;html=1;" parent="classGrades" vertex="1">
-          <mxGeometry y="82" width="170" height="26" as="geometry"/>
-        </mxCell>
-        <mxCell id="gradeAttr4" value="- exam_1_score : float" style="text;strokeColor=none;fillColor=none;align=left;verticalAlign=middle;whiteSpace=wrap;html=1;" parent="classGrades" vertex="1">
-          <mxGeometry y="108" width="170" height="26" as="geometry"/>
-        </mxCell>
-        <mxCell id="gradeAttr5" value="- task_1_score : float" style="text;strokeColor=none;fillColor=none;align=left;verticalAlign=middle;whiteSpace=wrap;html=1;" parent="classGrades" vertex="1">
-          <mxGeometry y="134" width="170" height="26" as="geometry"/>
-        </mxCell>
-        <mxCell id="gradeAttr6" value="- exam_2_score : float" style="text;strokeColor=none;fillColor=none;align=left;verticalAlign=middle;whiteSpace=wrap;html=1;" parent="classGrades" vertex="1">
-          <mxGeometry y="160" width="170" height="26" as="geometry"/>
-        </mxCell>
-        <mxCell id="gradeAttr7" value="- task_2_score : float" style="text;strokeColor=none;fillColor=none;align=left;verticalAlign=middle;whiteSpace=wrap;html=1;" parent="classGrades" vertex="1">
-          <mxGeometry y="186" width="170" height="26" as="geometry"/>
-        </mxCell>
-        <mxCell id="gradeAttr8" value="- makeup_exam_score : float" style="text;strokeColor=none;fillColor=none;align=left;verticalAlign=middle;whiteSpace=wrap;html=1;" parent="classGrades" vertex="1">
-          <mxGeometry y="212" width="170" height="26" as="geometry"/>
-        </mxCell>
-        <mxCell id="gradeAttr9" value="- final_score : float" style="text;strokeColor=none;fillColor=none;align=left;verticalAlign=middle;whiteSpace=wrap;html=1;" parent="classGrades" vertex="1">
-          <mxGeometry y="238" width="170" height="26" as="geometry"/>
-        </mxCell>
-
-        <!-- Relacionamento Grades - Student (FK student_id) -->
-        <mxCell id="edgeGradesStudent" value="" style="edgeStyle=entityRelationEdgeStyle;endArrow=none;html=1;" parent="1" edge="1" source="classGrades" target="classStudent">
-          <mxGeometry relative="1" as="geometry"/>
-        </mxCell>
-
-        <!-- Relacionamento Grades - Subjects (FK subject_id) -->
-        <mxCell id="edgeGradesSubject" value="" style="edgeStyle=entityRelationEdgeStyle;endArrow=none;html=1;" parent="1" edge="1" source="classGrades" target="classSubjects">
-          <mxGeometry relative="1" as="geometry"/>
-        </mxCell>
-
-      </root>
-    </mxGraphModel>
-  </diagram>
+<mxfile host="65bd71144e">
+    <diagram id="correctedUMLDiagram" name="UML Classes Corrected">
+        <mxGraphModel dx="2188" dy="1678" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="1400" pageHeight="1000" math="0" shadow="0">
+            <root>
+                <mxCell id="0"/>
+                <mxCell id="1" parent="0"/>
+                <mxCell id="classUser" value="User" style="swimlane;rounded=1;html=1;" parent="1" vertex="1">
+                    <mxGeometry x="120" y="-10" width="180" height="270" as="geometry"/>
+                </mxCell>
+                <mxCell id="userAttr1" value="+ user_id : int&amp;nbsp;" style="text;html=1;" parent="classUser" vertex="1">
+                    <mxGeometry x="10" y="30" width="160" height="26" as="geometry"/>
+                </mxCell>
+                <mxCell id="userAttr2" value="- full_name : string" style="text;html=1;" parent="classUser" vertex="1">
+                    <mxGeometry x="10" y="60" width="160" height="26" as="geometry"/>
+                </mxCell>
+                <mxCell id="userAttr3" value="- birth_date : date" style="text;html=1;" parent="classUser" vertex="1">
+                    <mxGeometry x="10" y="90" width="160" height="26" as="geometry"/>
+                </mxCell>
+                <mxCell id="userAttr4" value="- phone : string" style="text;html=1;" parent="classUser" vertex="1">
+                    <mxGeometry x="10" y="120" width="160" height="26" as="geometry"/>
+                </mxCell>
+                <mxCell id="userAttr5" value="- email : string" style="text;html=1;" parent="classUser" vertex="1">
+                    <mxGeometry x="10" y="150" width="160" height="26" as="geometry"/>
+                </mxCell>
+                <mxCell id="userAttr6" value="- rg : string" style="text;html=1;" parent="classUser" vertex="1">
+                    <mxGeometry x="10" y="180" width="160" height="26" as="geometry"/>
+                </mxCell>
+                <mxCell id="userAttr7" value="- cpf : string" style="text;html=1;" parent="classUser" vertex="1">
+                    <mxGeometry x="10" y="210" width="160" height="26" as="geometry"/>
+                </mxCell>
+                <mxCell id="userAttr8" value="- role_id : int&amp;nbsp;" style="text;html=1;" parent="classUser" vertex="1">
+                    <mxGeometry x="10" y="240" width="160" height="26" as="geometry"/>
+                </mxCell>
+                <mxCell id="classRoles" value="Roles" style="swimlane;rounded=1;html=1;" parent="1" vertex="1">
+                    <mxGeometry x="390" y="-100" width="180" height="100" as="geometry"/>
+                </mxCell>
+                <mxCell id="rolesAttr1" value="+ role_id : int&amp;nbsp;" style="text;html=1;" parent="classRoles" vertex="1">
+                    <mxGeometry x="10" y="30" width="160" height="26" as="geometry"/>
+                </mxCell>
+                <mxCell id="rolesAttr2" value="- role_name : string" style="text;html=1;" parent="classRoles" vertex="1">
+                    <mxGeometry x="10" y="60" width="160" height="26" as="geometry"/>
+                </mxCell>
+                <mxCell id="edgeUserRoles" style="edgeStyle=orthogonalEdgeStyle;rounded=0;html=1;exitX=1;exitY=0.5;entryX=0;entryY=0.5;" parent="1" source="classUser" target="classRoles" edge="1">
+                    <mxGeometry relative="1" as="geometry"/>
+                </mxCell>
+                <mxCell id="classStudent" value="Student" style="swimlane;rounded=1;html=1;" parent="1" vertex="1">
+                    <mxGeometry x="-110" y="440" width="180" height="180" as="geometry"/>
+                </mxCell>
+                <mxCell id="studentAttr1" value="+ student_id : int" style="text;html=1;" parent="classStudent" vertex="1">
+                    <mxGeometry x="10" y="30" width="160" height="26" as="geometry"/>
+                </mxCell>
+                <mxCell id="studentAttr2" value="- user_id : int" style="text;html=1;" parent="classStudent" vertex="1">
+                    <mxGeometry x="10" y="60" width="160" height="26" as="geometry"/>
+                </mxCell>
+                <mxCell id="studentAttr3" value="- enrollment_date : date" style="text;html=1;" parent="classStudent" vertex="1">
+                    <mxGeometry x="10" y="90" width="160" height="26" as="geometry"/>
+                </mxCell>
+                <mxCell id="studentAttr4" value="- class_id : int" style="text;html=1;" parent="classStudent" vertex="1">
+                    <mxGeometry x="10" y="120" width="160" height="26" as="geometry"/>
+                </mxCell>
+                <mxCell id="studentAttr5" value="- degreeprogram_id : int" style="text;html=1;" parent="classStudent" vertex="1">
+                    <mxGeometry x="10" y="150" width="160" height="26" as="geometry"/>
+                </mxCell>
+                <mxCell id="edgeStudentUser" style="edgeStyle=orthogonalEdgeStyle;rounded=0;html=1;exitX=0.418;exitY=-0.007;exitDx=0;exitDy=0;exitPerimeter=0;" parent="1" source="classStudent" edge="1">
+                    <mxGeometry relative="1" as="geometry">
+                        <mxPoint x="110" y="160" as="targetPoint"/>
+                        <Array as="points">
+                            <mxPoint x="-35" y="160"/>
+                        </Array>
+                    </mxGeometry>
+                </mxCell>
+                <mxCell id="classProfessor" value="Professor" style="swimlane;rounded=1;html=1;" parent="1" vertex="1">
+                    <mxGeometry x="310" y="425" width="180" height="185" as="geometry"/>
+                </mxCell>
+                <mxCell id="profAttr1" value="+ professor_id : int&amp;nbsp;" style="text;html=1;" parent="classProfessor" vertex="1">
+                    <mxGeometry x="10" y="30" width="160" height="26" as="geometry"/>
+                </mxCell>
+                <mxCell id="profAttr2" value="- user_id : int&amp;nbsp;" style="text;html=1;" parent="classProfessor" vertex="1">
+                    <mxGeometry x="10" y="60" width="160" height="26" as="geometry"/>
+                </mxCell>
+                <mxCell id="profAttr3" value="- hire_date : date" style="text;html=1;" parent="classProfessor" vertex="1">
+                    <mxGeometry x="10" y="90" width="160" height="26" as="geometry"/>
+                </mxCell>
+                <mxCell id="profAttr4" value="- subject_1 : int&amp;nbsp;" style="text;html=1;" parent="classProfessor" vertex="1">
+                    <mxGeometry x="10" y="120" width="160" height="26" as="geometry"/>
+                </mxCell>
+                <mxCell id="profAttr5" value="- subject_2 : int&amp;nbsp;" style="text;html=1;" parent="classProfessor" vertex="1">
+                    <mxGeometry x="10" y="150" width="160" height="26" as="geometry"/>
+                </mxCell>
+                <mxCell id="edgeProfessorUser" style="edgeStyle=orthogonalEdgeStyle;rounded=0;html=1;exitX=1;exitY=0.5;entryX=0;entryY=0.5;" parent="1" source="classProfessor" target="classUser" edge="1">
+                    <mxGeometry relative="1" as="geometry">
+                        <Array as="points">
+                            <mxPoint x="490" y="400"/>
+                            <mxPoint x="490" y="280"/>
+                            <mxPoint y="280"/>
+                            <mxPoint y="160"/>
+                        </Array>
+                    </mxGeometry>
+                </mxCell>
+                <mxCell id="classAdmin" value="Administration" style="swimlane;rounded=1;html=1;" parent="1" vertex="1">
+                    <mxGeometry x="-230" y="-120" width="180" height="120" as="geometry"/>
+                </mxCell>
+                <mxCell id="adminAttr1" value="+ admin_id : int" style="text;html=1;" parent="classAdmin" vertex="1">
+                    <mxGeometry x="10" y="30" width="160" height="26" as="geometry"/>
+                </mxCell>
+                <mxCell id="adminAttr2" value="- user_id : int&amp;nbsp;" style="text;html=1;" parent="classAdmin" vertex="1">
+                    <mxGeometry x="10" y="60" width="160" height="26" as="geometry"/>
+                </mxCell>
+                <mxCell id="adminAttr3" value="- hire_date : date" style="text;html=1;" parent="classAdmin" vertex="1">
+                    <mxGeometry x="10" y="90" width="160" height="26" as="geometry"/>
+                </mxCell>
+                <mxCell id="edgeAdminUser" style="edgeStyle=orthogonalEdgeStyle;rounded=0;html=1;exitX=1;exitY=0.5;entryX=0.25;entryY=0;entryDx=0;entryDy=0;" parent="1" source="classAdmin" target="classUser" edge="1">
+                    <mxGeometry relative="1" as="geometry"/>
+                </mxCell>
+                <mxCell id="classClasses" value="Classes" style="swimlane;rounded=1;html=1;" parent="1" vertex="1">
+                    <mxGeometry x="40" y="760" width="180" height="210" as="geometry"/>
+                </mxCell>
+                <mxCell id="classesAttr1" value="+ class_id : int&amp;nbsp;&lt;div&gt;&lt;br&gt;&lt;/div&gt;" style="text;html=1;" parent="classClasses" vertex="1">
+                    <mxGeometry x="10" y="30" width="160" height="26" as="geometry"/>
+                </mxCell>
+                <mxCell id="classesAttr2" value="- subject_id : int&amp;nbsp;" style="text;html=1;" parent="classClasses" vertex="1">
+                    <mxGeometry x="10" y="60" width="160" height="26" as="geometry"/>
+                </mxCell>
+                <mxCell id="classesAttr3" value="- professor_id : int&amp;nbsp;" style="text;html=1;" parent="classClasses" vertex="1">
+                    <mxGeometry x="10" y="90" width="160" height="26" as="geometry"/>
+                </mxCell>
+                <mxCell id="classesAttr4" value="- turn : string" style="text;html=1;" parent="classClasses" vertex="1">
+                    <mxGeometry x="10" y="120" width="160" height="26" as="geometry"/>
+                </mxCell>
+                <mxCell id="classesAttr5" value="- year : int" style="text;html=1;" parent="classClasses" vertex="1">
+                    <mxGeometry x="10" y="150" width="160" height="26" as="geometry"/>
+                </mxCell>
+                <mxCell id="classesAttr6" value="- semester : int" style="text;html=1;" parent="classClasses" vertex="1">
+                    <mxGeometry x="10" y="180" width="160" height="26" as="geometry"/>
+                </mxCell>
+                <mxCell id="edgeStudentClasses" style="edgeStyle=orthogonalEdgeStyle;rounded=0;html=1;entryX=0;entryY=0.5;exitX=0.75;exitY=1;exitDx=0;exitDy=0;" parent="1" source="classStudent" target="classClasses" edge="1">
+                    <mxGeometry relative="1" as="geometry">
+                        <mxPoint x="120" y="590" as="sourcePoint"/>
+                        <Array as="points">
+                            <mxPoint x="-20" y="620"/>
+                            <mxPoint x="-20" y="865"/>
+                        </Array>
+                    </mxGeometry>
+                </mxCell>
+                <mxCell id="edgeClassesProfessor" style="edgeStyle=orthogonalEdgeStyle;rounded=0;html=1;entryX=0;entryY=0.5;" parent="1" target="classProfessor" edge="1">
+                    <mxGeometry relative="1" as="geometry">
+                        <mxPoint x="220" y="840" as="sourcePoint"/>
+                    </mxGeometry>
+                </mxCell>
+                <mxCell id="classSubjects" value="Subjects" style="swimlane;rounded=1;html=1;" parent="1" vertex="1">
+                    <mxGeometry x="390" y="815" width="180" height="100" as="geometry"/>
+                </mxCell>
+                <mxCell id="subjectsAttr1" value="+ subject_id : int&amp;nbsp;" style="text;html=1;" parent="classSubjects" vertex="1">
+                    <mxGeometry x="10" y="30" width="160" height="26" as="geometry"/>
+                </mxCell>
+                <mxCell id="subjectsAttr2" value="- subject_name : string" style="text;html=1;" parent="classSubjects" vertex="1">
+                    <mxGeometry x="10" y="60" width="160" height="26" as="geometry"/>
+                </mxCell>
+                <mxCell id="edgeClassesSubjects" style="edgeStyle=orthogonalEdgeStyle;rounded=0;html=1;exitX=1;exitY=0.5;entryX=0;entryY=0.5;" parent="1" source="classClasses" target="classSubjects" edge="1">
+                    <mxGeometry relative="1" as="geometry"/>
+                </mxCell>
+                <mxCell id="classCurriculum" value="AcademicCurriculum" style="swimlane;rounded=1;html=1;" parent="1" vertex="1">
+                    <mxGeometry x="530" y="300" width="180" height="120" as="geometry"/>
+                </mxCell>
+                <mxCell id="curriculumAttr1" value="+ curriculum_id : int&amp;nbsp;" style="text;html=1;" parent="classCurriculum" vertex="1">
+                    <mxGeometry x="10" y="30" width="160" height="26" as="geometry"/>
+                </mxCell>
+                <mxCell id="curriculumAttr2" value="- degreeprogram_id : int&amp;nbsp;" style="text;html=1;" parent="classCurriculum" vertex="1">
+                    <mxGeometry x="10" y="60" width="160" height="26" as="geometry"/>
+                </mxCell>
+                <mxCell id="curriculumAttr3" value="- subject_id : int&amp;nbsp;" style="text;html=1;" parent="classCurriculum" vertex="1">
+                    <mxGeometry x="10" y="90" width="160" height="26" as="geometry"/>
+                </mxCell>
+                <mxCell id="classDegreeProg" value="DegreeProgram" style="swimlane;rounded=1;html=1;" parent="1" vertex="1">
+                    <mxGeometry x="680" y="120" width="200" height="100" as="geometry"/>
+                </mxCell>
+                <mxCell id="degAttr1" value="+ degreeprogram_id : int&amp;nbsp;" style="text;html=1;" parent="classDegreeProg" vertex="1">
+                    <mxGeometry x="10" y="30" width="180" height="26" as="geometry"/>
+                </mxCell>
+                <mxCell id="degAttr2" value="- degreeprogram_name : string" style="text;html=1;" parent="classDegreeProg" vertex="1">
+                    <mxGeometry x="10" y="60" width="180" height="26" as="geometry"/>
+                </mxCell>
+                <mxCell id="edgeStudentDegree" style="edgeStyle=orthogonalEdgeStyle;rounded=0;html=1;exitX=0.788;exitY=0.002;entryX=0;entryY=0.5;exitDx=0;exitDy=0;exitPerimeter=0;" parent="1" source="classStudent" target="classDegreeProg" edge="1">
+                    <mxGeometry relative="1" as="geometry">
+                        <Array as="points">
+                            <mxPoint x="32" y="350"/>
+                            <mxPoint x="410" y="350"/>
+                            <mxPoint x="410" y="170"/>
+                        </Array>
+                    </mxGeometry>
+                </mxCell>
+                <mxCell id="edgeCurricDegree" style="edgeStyle=orthogonalEdgeStyle;rounded=0;html=1;exitX=1;exitY=0.5;entryX=0.25;entryY=1;entryDx=0;entryDy=0;" parent="1" source="classCurriculum" target="classDegreeProg" edge="1">
+                    <mxGeometry relative="1" as="geometry"/>
+                </mxCell>
+                <mxCell id="edgeCurricSubject" style="edgeStyle=orthogonalEdgeStyle;rounded=0;html=1;exitX=1;exitY=0.5;entryX=0.5;entryY=0;entryDx=0;entryDy=0;" parent="1" source="classCurriculum" target="classSubjects" edge="1">
+                    <mxGeometry relative="1" as="geometry">
+                        <Array as="points">
+                            <mxPoint x="710" y="380"/>
+                            <mxPoint x="720" y="380"/>
+                            <mxPoint x="720" y="660"/>
+                            <mxPoint x="480" y="660"/>
+                        </Array>
+                    </mxGeometry>
+                </mxCell>
+                <mxCell id="classAttendance" value="Attendance" style="swimlane;rounded=1;html=1;" parent="1" vertex="1">
+                    <mxGeometry x="-380" y="425" width="200" height="210" as="geometry"/>
+                </mxCell>
+                <mxCell id="attAttr1" value="+ attendance_id : int" style="text;html=1;" parent="classAttendance" vertex="1">
+                    <mxGeometry x="10" y="30" width="180" height="26" as="geometry"/>
+                </mxCell>
+                <mxCell id="attAttr2" value="- student_id : int" style="text;html=1;" parent="classAttendance" vertex="1">
+                    <mxGeometry x="10" y="60" width="180" height="26" as="geometry"/>
+                </mxCell>
+                <mxCell id="attAttr3" value="- attendance_date : date" style="text;html=1;" parent="classAttendance" vertex="1">
+                    <mxGeometry x="10" y="90" width="180" height="26" as="geometry"/>
+                </mxCell>
+                <mxCell id="attAttr4" value="- daily_presence : boolean" style="text;html=1;" parent="classAttendance" vertex="1">
+                    <mxGeometry x="10" y="120" width="180" height="26" as="geometry"/>
+                </mxCell>
+                <mxCell id="attAttr5" value="- class_count : int" style="text;html=1;" parent="classAttendance" vertex="1">
+                    <mxGeometry x="10" y="150" width="180" height="26" as="geometry"/>
+                </mxCell>
+                <mxCell id="attAttr6" value="- total_presences : int" style="text;html=1;" parent="classAttendance" vertex="1">
+                    <mxGeometry x="10" y="180" width="180" height="26" as="geometry"/>
+                </mxCell>
+                <mxCell id="classGrades" value="Grades" style="swimlane;rounded=1;html=1;" parent="1" vertex="1">
+                    <mxGeometry x="780" y="650" width="200" height="310" as="geometry"/>
+                </mxCell>
+                <mxCell id="gradeAttr1" value="+ grade_id : int&amp;nbsp;" style="text;html=1;" parent="classGrades" vertex="1">
+                    <mxGeometry x="10" y="30" width="180" height="26" as="geometry"/>
+                </mxCell>
+                <mxCell id="gradeAttr2" value="- subject_id : int&amp;nbsp;" style="text;html=1;" parent="classGrades" vertex="1">
+                    <mxGeometry x="10" y="60" width="180" height="26" as="geometry"/>
+                </mxCell>
+                <mxCell id="gradeAttr3" value="- student_id : int&amp;nbsp;" style="text;html=1;" parent="classGrades" vertex="1">
+                    <mxGeometry x="10" y="90" width="180" height="26" as="geometry"/>
+                </mxCell>
+                <mxCell id="gradeAttr4" value="- exam_1_score : float" style="text;html=1;" parent="classGrades" vertex="1">
+                    <mxGeometry x="10" y="120" width="180" height="26" as="geometry"/>
+                </mxCell>
+                <mxCell id="gradeAttr5" value="- task_1_score : float" style="text;html=1;" parent="classGrades" vertex="1">
+                    <mxGeometry x="10" y="150" width="180" height="26" as="geometry"/>
+                </mxCell>
+                <mxCell id="gradeAttr6" value="- exam_2_score : float" style="text;html=1;" parent="classGrades" vertex="1">
+                    <mxGeometry x="10" y="180" width="180" height="26" as="geometry"/>
+                </mxCell>
+                <mxCell id="gradeAttr7" value="- task_2_score : float" style="text;html=1;" parent="classGrades" vertex="1">
+                    <mxGeometry x="10" y="210" width="180" height="26" as="geometry"/>
+                </mxCell>
+                <mxCell id="gradeAttr8" value="- makeup_exam_score : float" style="text;html=1;" parent="classGrades" vertex="1">
+                    <mxGeometry x="10" y="240" width="180" height="26" as="geometry"/>
+                </mxCell>
+                <mxCell id="gradeAttr9" value="- final_score : float" style="text;html=1;" parent="classGrades" vertex="1">
+                    <mxGeometry x="10" y="270" width="180" height="26" as="geometry"/>
+                </mxCell>
+                <mxCell id="edgeGradesStudent" style="edgeStyle=orthogonalEdgeStyle;rounded=0;html=1;entryX=1;entryY=0.5;entryDx=0;entryDy=0;" parent="1" target="classStudent" edge="1">
+                    <mxGeometry relative="1" as="geometry">
+                        <mxPoint x="780" y="700" as="sourcePoint"/>
+                        <mxPoint x="70" y="620" as="targetPoint"/>
+                        <Array as="points">
+                            <mxPoint x="140" y="700"/>
+                            <mxPoint x="140" y="530"/>
+                        </Array>
+                    </mxGeometry>
+                </mxCell>
+                <mxCell id="edgeGradesSubject" style="edgeStyle=orthogonalEdgeStyle;rounded=0;html=1;entryX=1;entryY=0.5;" parent="1" target="classSubjects" edge="1">
+                    <mxGeometry relative="1" as="geometry">
+                        <mxPoint x="780" y="865" as="sourcePoint"/>
+                    </mxGeometry>
+                </mxCell>
+                <mxCell id="7" style="edgeStyle=none;html=1;entryX=0;entryY=0.5;entryDx=0;entryDy=0;exitX=1;exitY=0.5;exitDx=0;exitDy=0;" edge="1" parent="1" source="classAttendance" target="classStudent">
+                    <mxGeometry relative="1" as="geometry"/>
+                </mxCell>
+            </root>
+        </mxGraphModel>
+    </diagram>
 </mxfile>
