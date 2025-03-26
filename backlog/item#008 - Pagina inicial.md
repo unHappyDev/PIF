@@ -1,14 +1,19 @@
 # Pagina inicial
 
-- Importância: **Alta**
+## Descrição
+
+Onde devem aparecer todos os avisos postados por professores ou por pessoas da secretaria.
+
+## Prazos
+
 - Data limite para design no Figma: 14/05/2025
 - Margem de erro para design: 3 dias (17/05/2025)
 - Data limite de desenvolvimento: 21/05/2025
 - Margem de erro: 1 semana (28/05/2025)
 
-## Descrição
+## Prioridade
 
-Onde devem aparecer todos os avisos postados por professores ou por pessoas da secretaria.
+**Alta**
 
 ## Requisitos
 

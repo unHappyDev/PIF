@@ -1,14 +1,19 @@
 # Pagina de cadastro
 
-- Importância: **Alta**
+## Descrição
+
+A pagina para cadastrar novos usuários de qualquer tipo no sistema.
+
+## Prazos
+
 - Data limite para design no Figma: 07/04/2025
 - Margem de erro para design: 3 dias (10/04/2025)
 - Data limite de desenvolvimento: 14/04/2025
 - Margem de erro: 1 semana (21/04/2025)
 
-## Descrição
+## Prioridade
 
-A pagina para cadastrar novos usuários de qualquer tipo no sistema.
+**Alta**
 
 ## Requisitos
 
