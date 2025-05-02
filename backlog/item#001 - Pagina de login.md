@@ -33,14 +33,14 @@ Deve ser simples e intuitiva, com apenas dois campos para serem preenchidos, log
 
 ### Back-End
 
-1. Deve ser feita uma validação nas variáveis *login* e *senha*, recebida do Front-End, para verificar se existe um usuario cadastrado com esses dados.
+1. Deve ser feita uma validação nas variáveis *login* e *senha*, recebida do Front-End, para verificar se existe um usuário cadastrado com esses dados.
 2. No primeiro login de um usuário ele entrará com uma senha padrão, definida automaticamente no cadastro e o sistema deve obriga-lo a trocar essa senha redirecionando-o diretamente para a pagina de alteração de senha.
 3. Após a confirmação que o login foi efetuado correntemente, deve retornar ao Front-End o Token JWT do usuário, onde pode ser armazenado o id  e o tipo do usuário.
 
 ### Banco de dados
 
-1. Deve ser feita a tabela de usuario com colunas para armazenar: *nome completo*, *data de nascimento*, *CPF*, *telefone* *email*, *senha* e o *tipo de usuario*(secretaria, prifessor ou aluno).
-2. devem ser feitas também as tabelas especificas para secretaria, professor e aluno(serão atualiadas conforme necessidade no decorrer do projeto):
-    - colunas da tabela secretaria: *id do usuario*, *data de contratação*.
-    - colunas da tabela professor: *id do usuario*, *data de contratação*.
-    - colunas da tabela aluno: *id do usuario*, *RA*.
+1. Deve ser feita a tabela de usuário com colunas para armazenar: *nome completo*, *data de nascimento*, *CPF*, *telefone* *email*, *senha* e o *tipo de usuário*(secretaria, professor ou aluno).
+2. devem ser feitas também as tabelas especificas para secretaria, professor e aluno(serão atualizadas conforme necessidade no decorrer do projeto):
+    - colunas da tabela secretaria: *id do usuário*, *data de contratação*.
+    - colunas da tabela professor: *id do usuário*, *data de contratação*.
+    - colunas da tabela aluno: *id do usuário*, *RA*.
